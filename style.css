@@ -365,22 +365,6 @@ td,
 th {
   padding: 0; }
 
-/* Table of contents
-––––––––––––––––––––––––––––––––––––––––––––––––––
-- Grid
-- Base Styles
-- Typography
-- Links
-- Buttons
-- Forms
-- Lists
-- Code
-- Tables
-- Spacing
-- Utilities
-- Clearing
-- Media Queries
-*/
 /* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .container {
@@ -531,11 +515,36 @@ body {
   /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
   font-weight: 400;
-  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #222; }
 
-/* Typography
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+header#masthead {
+  background: #111; }
+  header#masthead div.row {
+    width: 100%;
+    max-width: 960px;
+    margin: auto; }
+  header#masthead h1 {
+    font-size: 4rem;
+    margin-bottom: 0.5rem; }
+    header#masthead h1 a {
+      color: #ddd;
+      text-decoration: none; }
+    header#masthead h1 a:hover {
+      color: #0FA0CE;
+      text-decoration: underline; }
+  header#masthead p.site-description {
+    color: #ddd;
+    font-style: italic;
+    margin-left: 2rem; }
+  header#masthead nav#site-navigation ul#primary-menu {
+    list-style-type: none; }
+    header#masthead nav#site-navigation ul#primary-menu li {
+      display: inline; }
+
+div.right {
+  text-align: right; }
+
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 2rem;
@@ -592,6 +601,10 @@ h6 {
     font-size: 1.5rem; } }
 p {
   margin-top: 0; }
+
+#masthead h1 {
+  font-family: 'Libre Baskerville', serif;
+  font-style: italic; }
 
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -809,6 +822,14 @@ ol,
 form {
   margin-bottom: 2.5rem; }
 
+/* Misc
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+hr {
+  margin-top: 3rem;
+  margin-bottom: 3.5rem;
+  border-width: 0;
+  border-top: 1px solid #E1E1E1; }
+
 /* Utilities
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .u-full-width {
@@ -824,14 +845,6 @@ form {
 
 .u-pull-left {
   float: left; }
-
-/* Misc
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-hr {
-  margin-top: 3rem;
-  margin-bottom: 3.5rem;
-  border-width: 0;
-  border-top: 1px solid #E1E1E1; }
 
 /* Clearing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -854,7 +867,22 @@ there.
 /* Larger than mobile */
 /* Larger than phablet (also point when grid becomes active) */
 /* Larger than tablet */
+@media (min-width: 750px) {
+  nav#site-navigation button {
+    display: none; } }
 /* Larger than desktop */
 /* Larger than Desktop HD */
+/* Screen readers
+  =========================================================================== */
+/**
+ * Hide screen reader text.
+ */
+.screen-reader-text {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden; }
 
 /*# sourceMappingURL=style.css.map */

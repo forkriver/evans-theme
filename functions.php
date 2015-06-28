@@ -112,6 +112,10 @@ add_action( 'widgets_init', 'evans_2015_widgets_init' );
  * Enqueue scripts and styles.
  */
 function evans_2015_scripts() {
+	// google fonts
+	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic|Open+Sans' );
+	
+	// stylesheet
 	wp_enqueue_style( 'evans-2015-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'evans-2015-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
