@@ -1,6 +1,6 @@
 === Evans Theatre 2015 ===
 
-Contributors: automattic
+Contributors: pjohanneson, automattic
 Tags: translation-ready, custom-background, theme-options, custom-menu, post-formats, threaded-comments
 
 Requires at least: 4.0
@@ -13,7 +13,7 @@ A starter theme called Evans Theatre 2015, or underscores.
 
 == Description ==
 
-Hi. I'm a starter theme called Evans Theatre 2015, or underscores, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
+Forked _s into Evans 2015, and started hacking, as instructed. So far I've incorporated the Skeleton stylesheets and started SASSifying everything. Then I need to start making my templates look right.
 
 == Installation ==
 	
