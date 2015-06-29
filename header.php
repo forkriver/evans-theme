@@ -26,7 +26,6 @@
 	<div class="row">
 	<div class="six columns site-branding">
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<p class="site-description"><?php bloginfo( 'description' ); ?></p>
 		</div><!-- .six columns .site-branding -->
 
 		<div class="six columns right">

@@ -9,7 +9,7 @@ Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-A starter theme called Evans Theatre 2015, or underscores.
+A starter theme called Evans Theatre 2015, or underscores.	
 
 == Description ==
 
