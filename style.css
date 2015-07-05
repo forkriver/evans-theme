@@ -533,8 +533,24 @@ header#masthead {
     header#masthead nav#site-navigation ul#primary-menu li {
       display: inline; }
 
+.movie {
+  margin-bottom: 20em; }
+  .movie .showtimes {
+    width: 100%;
+    color: #222;
+    float: left;
+    margin-top: 25em;
+    background: url("images/white-halftone.png") repeat;
+    text-shadow: #ddd 0 0 16px;
+    text-align: center; }
+    .movie .showtimes h1 {
+      font-style: italic; }
+    .movie .showtimes a {
+      color: #222;
+      text-decoration: none; }
+
 #content {
-  padding-top: 5rem; }
+  padding-top: 4rem; }
 
 div.right {
   text-align: right; }
