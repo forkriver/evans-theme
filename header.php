@@ -30,8 +30,15 @@
 
 		<div class="six columns right">
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'evans-2015' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'evans-2015' ); ?></button>
+			<?php
+				$args = array(
+					'theme_location' => 'primary',
+					'menu_id' => 'primary-menu',
+					'depth' => 1,
+					); 
+				wp_nav_menu( $args ); 
+			?>
 		</nav><!-- #site-navigation -->
 		</div><!-- .six columns -->
 		</div> <!-- .row -->

@@ -519,7 +519,11 @@ body {
   color: #222; }
 
 header#masthead {
-  background: #111; }
+  background: #111;
+  height: 4rem;
+  position: fixed;
+  width: 100%;
+  z-index: 9999; }
   header#masthead div.row {
     width: 100%;
     max-width: 960px;
@@ -528,6 +532,9 @@ header#masthead {
     list-style-type: none; }
     header#masthead nav#site-navigation ul#primary-menu li {
       display: inline; }
+
+#content {
+  padding-top: 5rem; }
 
 div.right {
   text-align: right; }
@@ -591,8 +598,8 @@ p {
   margin-top: 0; }
 
 header#masthead h1 {
-  font-size: 4rem;
-  margin-bottom: 0.5rem;
+  font-size: 3.6rem;
+  margin-bottom: 0.25rem;
   font-style: italic; }
   header#masthead h1 a {
     color: #ddd;
