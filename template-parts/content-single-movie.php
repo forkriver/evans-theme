@@ -9,11 +9,20 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
+<?php
+	$hero = 'large';
+	if( class_exists( 'Evans_Movie' ) && Evans_Movie::POST_TYPE === get_post_type() ) {
+		$hero = Evans_Movie::POST_TYPE . '_hero';
+	}
+	if( has_post_thumbnail() ) {
+		the_post_thumbnail( $hero );
+	}
+?>
 	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<?php the_title( '<h1 class="entry-title movie-title center">', '</h1>' ); ?>
 
 		<div class="entry-meta">
-			<?php evans_2015_posted_on(); ?>
+		<?php do_action( 'movie_meta' ); ?>
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 

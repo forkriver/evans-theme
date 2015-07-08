@@ -518,10 +518,14 @@ body {
   font-family: "Open Sans", sans-serif;
   color: #222; }
 
+body {
+  margin-bottom: 5rem; }
+
 header#masthead {
   background: #111;
   height: 4rem;
   position: fixed;
+  bottom: 0;
   width: 100%;
   z-index: 9999; }
   header#masthead div.row {
@@ -529,31 +533,47 @@ header#masthead {
     max-width: 960px;
     margin: auto; }
   header#masthead nav#site-navigation ul#primary-menu {
-    list-style-type: none; }
+    list-style-type: none;
+    margin-top: 0.25em; }
     header#masthead nav#site-navigation ul#primary-menu li {
-      display: inline; }
+      display: inline;
+      margin-right: 0.5em; }
+      header#masthead nav#site-navigation ul#primary-menu li a {
+        color: #ddd;
+        text-decoration: none; }
+      header#masthead nav#site-navigation ul#primary-menu li a:hover {
+        color: #45a;
+        text-decoration: underline; }
 
 .movie {
-  margin-bottom: 20em; }
+  margin: 0; }
   .movie .showtimes {
     width: 100%;
     color: #222;
-    float: left;
-    margin-top: 25em;
+    position: relative;
+    top: 66.67%;
     background: url("images/white-halftone.png") repeat;
     text-shadow: #ddd 0 0 16px;
-    text-align: center; }
+    text-align: center;
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222; }
     .movie .showtimes h1 {
       font-style: italic; }
     .movie .showtimes a {
       color: #222;
       text-decoration: none; }
-
-#content {
-  padding-top: 4rem; }
+    .movie .showtimes a:hover {
+      color: #45a;
+      text-shadow: #222 1px 1px 1px; }
 
 div.right {
   text-align: right; }
+
+.centered, .center {
+  text-align: center; }
+
+.single-movie.showtimes {
+  margin-bottom: 1em; }
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
@@ -591,6 +611,9 @@ h6 {
   line-height: 1.6;
   letter-spacing: 0; }
 
+a:visited {
+  color: #369; }
+
 /* Larger than phablet */
 @media (min-width: 550px) {
   h1 {
@@ -614,9 +637,10 @@ p {
   margin-top: 0; }
 
 header#masthead h1 {
+  font-family: "Quicksand", sans-serif;
   font-size: 3.6rem;
-  margin-bottom: 0.25rem;
-  font-style: italic; }
+  text-transform: lowercase;
+  letter-spacing: -0.4rem; }
   header#masthead h1 a {
     color: #ddd;
     text-decoration: none; }
@@ -627,13 +651,29 @@ header#masthead p.site-description {
   font-style: italic;
   margin-left: 2rem; }
 
+.upcoming-movies h3 {
+  font-style: italic; }
+  .upcoming-movies h3 a {
+    font-color: #222;
+    text-decoration: none; }
+  .upcoming-movies h3 a:hover {
+    font-color: #45a; }
+
+h1.widget-title {
+  font-size: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #ddd; }
+
+h1.movie-title {
+  font-style: italic; }
+
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color: #1EAEDB; }
+  color: #239; }
 
 a:hover {
-  color: #0FA0CE; }
+  color: #45a; }
 
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */

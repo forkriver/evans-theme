@@ -24,11 +24,11 @@
 
 	<header id="masthead" class="site-header" role="banner">
 	<div class="row">
-	<div class="six columns site-branding">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-		</div><!-- .six columns .site-branding -->
+	<div class="four columns site-branding">
+			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" title="<?php bloginfo('description' ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
+		</div><!-- .four columns .site-branding -->
 
-		<div class="six columns right">
+		<div class="eight columns right">
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'evans-2015' ); ?></button>
 			<?php
@@ -40,7 +40,7 @@
 				wp_nav_menu( $args ); 
 			?>
 		</nav><!-- #site-navigation -->
-		</div><!-- .six columns -->
+		</div><!-- .eight columns right -->
 		</div> <!-- .row -->
 	</header><!-- #masthead -->
 

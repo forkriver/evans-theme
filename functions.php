@@ -105,6 +105,16 @@ function evans_2015_widgets_init() {
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
 	) );
+
+	register_sidebar( array(
+		'name'			=> esc_html__( 'Front Page Sidebar', 'evans-2015' ),
+		'id'			=> 'sidebar-front-page',
+		'description'	=> '',
+		'before_widget' => '<aside id="%1$s" class="widget front-page %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h1 class="widget-title front-page">',
+		'after_title'   => '</h1>',
+	) );
 }
 add_action( 'widgets_init', 'evans_2015_widgets_init' );
 
@@ -113,7 +123,7 @@ add_action( 'widgets_init', 'evans_2015_widgets_init' );
  */
 function evans_2015_scripts() {
 	// google fonts
-	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic|Open+Sans' );
+	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic|Open+Sans|Quicksand|Josefin+Sans:700' );
 	
 	// stylesheet
 	wp_enqueue_style( 'evans-2015-style', get_stylesheet_uri() );
@@ -152,3 +162,28 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+add_action( 'movie_meta', 'spit_out_showtimes_yo' );
+function spit_out_showtimes_yo() {
+	if( ! class_exists( 'Evans_Movie' ) ) {
+		if( current_user_can( 'update_core' ) ) {
+			echo( "<p><strong>Note:</strong> You need to turn on the Evans Movie CPT plugin.</p>" );
+		}
+		return false;
+	}
+	global $post;
+	$showtimes = get_post_meta( $post->ID, Evans_Movie::PREFIX . 'showtime' );
+	if( $showtimes ) {
+		$format = get_option( 'date_format' ) . ' ' . get_option( 'time_format' );
+		sort( $showtimes );
+		echo( '<div class="single-movie showtimes centered">' );
+		foreach( $showtimes as $showtime ) {
+			echo( date( $format, $showtime ) );
+			if( $showtime !== end( $showtimes ) ) {
+				echo( ' | ' );
+			}
+		}
+		echo( '</div><!-- .single-movie showtimes -->' . PHP_EOL );
+	}
+	
+}
