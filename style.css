@@ -519,13 +519,13 @@ body {
   color: #222; }
 
 body {
-  margin-bottom: 5rem; }
+  margin-top: 5rem; }
 
 header#masthead {
   background: #111;
   height: 4rem;
   position: fixed;
-  bottom: 0;
+  top: 0;
   width: 100%;
   z-index: 9999; }
   header#masthead div.row {
@@ -546,17 +546,18 @@ header#masthead {
         text-decoration: underline; }
 
 .movie {
-  margin: 0; }
+  margin: 0;
+  position: relative; }
   .movie .showtimes {
     width: 100%;
-    color: #222;
-    position: relative;
+    position: absolute;
     top: 66.67%;
     background: url("images/white-halftone.png") repeat;
     text-shadow: #ddd 0 0 16px;
     text-align: center;
     border-top: 1px solid #222;
-    border-bottom: 1px solid #222; }
+    border-bottom: 1px solid #222;
+    box-shadow: #222 1px 1px 4px; }
     .movie .showtimes h1 {
       font-style: italic; }
     .movie .showtimes a {
