@@ -547,7 +547,13 @@ header#masthead {
 
 .movie {
   margin: 0;
-  position: relative; }
+  position: relative;
+  max-width: 960px;
+  height: auto; }
+  .movie img {
+    width: auto;
+    max-width: 100%;
+    height: auto; }
   .movie .showtimes {
     width: 100%;
     position: absolute;
