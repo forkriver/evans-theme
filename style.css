@@ -556,14 +556,8 @@ header#masthead {
     height: auto; }
   .movie .showtimes {
     width: 100%;
-    position: absolute;
-    top: 66.67%;
-    background: url("images/white-halftone.png") repeat;
-    text-shadow: #ddd 0 0 16px;
-    text-align: center;
-    border-top: 1px solid #222;
-    border-bottom: 1px solid #222;
-    box-shadow: #222 1px 1px 4px; }
+    position: relative;
+    text-align: center; }
     .movie .showtimes h1 {
       font-style: italic; }
     .movie .showtimes a {
@@ -938,6 +932,17 @@ there.
 @media (min-width: 750px) {
   nav#site-navigation button {
     display: none; } }
+@media (min-width: 960px) {
+  .movie .showtimes {
+    width: 100%;
+    position: absolute;
+    top: 66.67%;
+    background: url("images/white-halftone.png") repeat;
+    text-shadow: #ddd 0 0 16px;
+    text-align: center;
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+    box-shadow: #222 1px 1px 4px; } }
 /* Larger than desktop */
 /* Larger than Desktop HD */
 /* Screen readers
