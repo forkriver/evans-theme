@@ -530,13 +530,13 @@ body {
   color: #222; }
 
 body {
-  margin-top: 5rem; }
+  margin-bottom: 6rem; }
 
 header#masthead {
   background: #111;
   height: 4rem;
   position: fixed;
-  top: 0;
+  bottom: 0;
   width: 100%;
   z-index: 9999; }
   header#masthead div.row {
@@ -969,4 +969,4 @@ there.
   height: 1px;
   overflow: hidden; }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style-b.css.map */

@@ -187,3 +187,17 @@ function spit_out_showtimes_yo() {
 	}
 	
 }
+
+function pj_ab_testing() {
+	if( wp_is_mobile() ) {
+		// don't mess with the mobile crowd
+		return;
+	}
+	$random = wp_rand( 1, 1000 );
+	if( 0 === $random % 2 ) {
+		// on the even draws, swap out the stylesheet to B
+		wp_deregister_style( 'evans-2015-style' );
+		wp_register_style( 'evans-2015-style', get_stylesheet_directory_uri() . '/style-b.css' );
+	}
+}
+add_action( 'init', 'pj_ab_testing', 1 );
