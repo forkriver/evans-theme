@@ -163,6 +163,11 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
+/**
+ * Load the Theme Hook Alliance code.
+ */
+require_once( get_template_directory() . '/inc/tha-theme-hooks.php' );
+
 add_action( 'movie_meta', 'spit_out_showtimes_yo' );
 function spit_out_showtimes_yo() {
 	if( ! class_exists( 'Evans_Movie' ) ) {
