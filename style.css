@@ -559,6 +559,9 @@ header#masthead {
         color: #45a;
         text-decoration: underline; }
 
+body.admin-bar header#masthead {
+  top: 28px; }
+
 .movie {
   margin: 0;
   position: relative;
