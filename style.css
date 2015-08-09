@@ -530,7 +530,10 @@ body {
   color: #222; }
 
 body {
-  margin-top: 5rem; }
+  margin-top: 50px; }
+
+body.admin-bar {
+  margin-top: 78px; }
 
 header#masthead {
   background: #111;
