@@ -205,4 +205,4 @@ function pj_ab_testing() {
 		wp_register_style( 'evans-2015-style', get_stylesheet_directory_uri() . '/style-b.css' );
 	}
 }
-add_action( 'init', 'pj_ab_testing', 1 );
+// add_action( 'init', 'pj_ab_testing', 1 );
