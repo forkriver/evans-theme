@@ -27,23 +27,12 @@ tha_html_before();
 	<header id="masthead" class="site-header" role="banner">
 	<?php tha_header_top(); ?>
 	<div class="row">
-	<div class="four columns site-branding">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" title="<?php bloginfo('description' ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
-		</div><!-- .four columns .site-branding -->
+	<?php tha_header_before(); ?>
+	<div class="twelve columns center site-branding">
+		<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" title="<?php bloginfo('description' ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
+	</div><!-- .twelve columns center .site-branding -->
 
-		<div class="eight columns right"><?php tha_header_before(); ?>
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'evans-2015' ); ?></button>
-			<?php
-				$args = array(
-					'theme_location' => 'primary',
-					'menu_id' => 'primary-menu',
-					'depth' => 1,
-					); 
-				wp_nav_menu( $args ); 
-			?>
-		</nav><!-- #site-navigation -->
-		</div><!-- .eight columns right -->
+	
 		</div> <!-- .row -->
 	<?php tha_header_bottom(); ?>
 	</header><!-- #masthead -->

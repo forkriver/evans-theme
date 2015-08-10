@@ -15,7 +15,21 @@
 	<?php tha_footer_before(); ?>
 	<footer id="colophon" class="site-footer" role="contentinfo">
 	<?php tha_footer_top(); ?>
-
+	<div class="row">
+	<div class="twelve columns center">
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'evans-2015' ); ?></button>
+			<?php
+				$args = array(
+					'theme_location' => 'primary',
+					'menu_id' => 'primary-menu',
+					'depth' => 1,
+				); 
+				wp_nav_menu( $args ); 
+			?>
+		</nav><!-- #site-navigation -->
+		</div><!-- .twelve columns center -->
+		</div><!-- .row -->
 
 	<?php tha_footer_bottom(); ?>	
 	</footer><!-- #colophon -->
