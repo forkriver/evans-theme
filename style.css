@@ -530,7 +530,8 @@ body {
   color: #222; }
 
 body {
-  margin-top: 45px; }
+  margin-top: 46px;
+  margin-bottom: 50px; }
 
 header#masthead {
   background: #111;
@@ -579,7 +580,12 @@ div.right {
   margin-bottom: 1em; }
 
 footer.site-footer {
-  background: #111; }
+  background: #111;
+  position: fixed;
+  bottom: 0;
+  height: 40px;
+  width: 100%;
+  text-align: center; }
   footer.site-footer nav#site-navigation ul#primary-menu {
     list-style-type: none;
     margin-top: 0.25em; }
@@ -852,10 +858,13 @@ code {
   padding: .2rem .5rem;
   margin: 0 .2rem;
   font-size: 90%;
-  white-space: nowrap;
+  white-space: pre;
   background: #F1F1F1;
   border: 1px solid #E1E1E1;
   border-radius: 4px; }
+
+.form-allowed-tags > code {
+  white-space: pre-wrap; }
 
 pre > code {
   display: block;

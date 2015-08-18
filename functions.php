@@ -193,16 +193,15 @@ function spit_out_showtimes_yo() {
 	
 }
 
-function pj_ab_testing() {
-	if( wp_is_mobile() ) {
-		// don't mess with the mobile crowd
-		return;
-	}
-	$random = wp_rand( 1, 1000 );
-	if( 0 === $random % 2 ) {
-		// on the even draws, swap out the stylesheet to B
-		wp_deregister_style( 'evans-2015-style' );
-		wp_register_style( 'evans-2015-style', get_stylesheet_directory_uri() . '/style-b.css' );
+function evans_2015_replace_background() {
+	global $post;
+	if( is_front_page() ) {
+		if( has_post_thumbnail( $post->ID ) ) {
+			$img_id = get_post_thumbnail_id( $post->ID );
+			$image = wp_get_attachment_image( $img_id, 'full' );
+			$css = "body { background-image: {$image[0]}; }" . PHP_EOL;
+			wp_add_inline_style( 'evans-2015', $css );
+		}
 	}
 }
-// add_action( 'init', 'pj_ab_testing', 1 );
+//add_action( 'wp_enqueue_scripts', 'evans_2015_replace_background', 20 );
