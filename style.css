@@ -543,6 +543,9 @@ header#masthead {
 body.admin-bar header#masthead {
   top: 28px; }
 
+body {
+  margin-bottom: 5em; }
+
 .movie {
   margin: 0;
   position: relative;
@@ -578,12 +581,11 @@ footer.site-footer {
   background: #111;
   position: fixed;
   bottom: 0;
-  height: 40px;
   width: 100%;
   text-align: center; }
   footer.site-footer nav#site-navigation ul#primary-menu {
     list-style-type: none;
-    margin-top: 0.25em; }
+    margin-bottom: 0.25em; }
     footer.site-footer nav#site-navigation ul#primary-menu li {
       display: inline;
       margin-right: 0.5em; }

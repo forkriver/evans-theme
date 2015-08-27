@@ -18,13 +18,16 @@
 	<div class="row">
 	<div class="twelve columns center">
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'evans-2015' ); ?></button>
 			<?php
 				$args = array(
 					'theme_location' => 'primary',
 					'menu_id' => 'primary-menu',
+					'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
 					'depth' => 1,
 				); 
+			?>
+			<!-- <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'evans-2015' ); ?></button> -->
+			<?php
 				wp_nav_menu( $args ); 
 			?>
 		</nav><!-- #site-navigation -->

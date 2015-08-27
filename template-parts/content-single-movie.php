@@ -9,6 +9,8 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
+<div class="movie">
+
 <?php
 	$hero = 'large';
 	if( class_exists( 'Evans_Movie' ) && Evans_Movie::POST_TYPE === get_post_type() ) {
@@ -35,6 +37,8 @@
 			) );
 		?>
 	</div><!-- .entry-content -->
+
+	</div> <!-- .movie -->
 
 	<footer class="entry-footer">
 		<?php evans_2015_entry_footer(); ?>
