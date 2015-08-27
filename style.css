@@ -529,14 +529,9 @@ body {
   font-family: "Open Sans", sans-serif;
   color: #222; }
 
-body {
-  margin-top: 46px;
-  margin-bottom: 50px; }
-
 header#masthead {
   background: #111;
   height: 50px;
-  position: fixed;
   top: 0;
   width: 100%;
   z-index: 9999; }
@@ -956,8 +951,16 @@ there.
 /* Larger than phablet (also point when grid becomes active) */
 /* Larger than tablet */
 @media (min-width: 750px) {
+  body {
+    margin-top: 46px;
+    margin-bottom: 50px; }
+
   nav#site-navigation button {
-    display: none; } }
+    display: none; }
+
+  header#masthead {
+    position: fixed;
+    top: 0; } }
 @media (min-width: 960px) {
   .movie .showtimes {
     width: 100%;
