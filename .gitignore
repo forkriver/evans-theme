@@ -8,3 +8,4 @@ node_modules/
 *.map
 zzz_*
 tha.txt
+wordpress-tests/
