@@ -7,21 +7,9 @@
  */
 class WP_Test_WordPress_Plugin_Tests extends WP_UnitTestCase {
 
-function test_kickoff() {
-	$this->assertTrue( true );
-}
-
-function test_fail() {
-	$this->assertTrue( false );
-}
-	/**
-	 * Run a simple test to ensure that the tests are running
-	 */
-	 function test_tests() {
-
+	function test_kickoff() {
 		$this->assertTrue( true );
-
-	 }
+	}
 
 	/**
 	 * If these tests are being run on Travis CI, verify that the version of
