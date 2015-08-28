@@ -17,7 +17,7 @@
 	<?php tha_footer_top(); ?>
 	<div class="row">
 	<div class="twelve columns center">
-		<nav id="site-navigation" class="main-navigation" role="navigation">
+		<nav id="site-navigation" class="main-navigation" role="navigation">	
 			<?php
 				$args = array(
 					'theme_location' => 'primary',

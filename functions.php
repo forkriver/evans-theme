@@ -135,6 +135,9 @@ function evans_2015_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	// icomoon font
+	wp_enqueue_style( 'icomoon', get_template_directory_uri() . '/fonts/icomoon.css' );
 }
 add_action( 'wp_enqueue_scripts', 'evans_2015_scripts' );
 
