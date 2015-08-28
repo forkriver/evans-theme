@@ -975,6 +975,9 @@ there.
     border-bottom: 1px solid #222;
     box-shadow: #222 1px 1px 4px; } }
 /* Larger than desktop */
+@media (min-width: 1000px) {
+  nav#site-navigation {
+    font-size: 150%; } }
 /* Larger than Desktop HD */
 /* Screen readers
   =========================================================================== */
