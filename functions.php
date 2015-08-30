@@ -184,14 +184,14 @@ function spit_out_showtimes_yo() {
 	if( $showtimes ) {
 		$format = get_option( 'date_format' ) . ' ' . get_option( 'time_format' );
 		sort( $showtimes );
-		echo( '<div class="single-movie showtimes centered">' );
+		echo( '<div class="single-movie centered">' );
 		foreach( $showtimes as $showtime ) {
 			echo( date( $format, $showtime ) );
 			if( $showtime !== end( $showtimes ) ) {
 				echo( ' | ' );
 			}
 		}
-		echo( '</div><!-- .single-movie showtimes -->' . PHP_EOL );
+		echo( '</div><!-- .single-movie -->' . PHP_EOL );
 	}
 	
 }
