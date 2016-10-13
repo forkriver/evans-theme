@@ -552,7 +552,6 @@ body {
   max-width: 960px;
   height: auto; }
   .movie img {
-    width: auto;
     max-width: 100%;
     height: auto; }
   .movie .showtimes {
