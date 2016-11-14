@@ -568,7 +568,8 @@ body {
       text-shadow: #222 1px 1px 1px; }
 
 div.featured-image {
-  text-align: center; }
+  text-align: center;
+  width: 100%; }
 
 div.right {
   text-align: right; }
