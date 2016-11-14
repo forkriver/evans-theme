@@ -567,6 +567,9 @@ body {
       color: #45a;
       text-shadow: #222 1px 1px 1px; }
 
+div.featured-image {
+  text-align: center; }
+
 div.right {
   text-align: right; }
 
