@@ -24,7 +24,9 @@
 			$hero = Evans_Movie::POST_TYPE . '_hero';
 		}
 		if ( has_post_thumbnail() ) {
+			echo '<div class="featured-image news post">';
 			the_post_thumbnail( $hero );
+			echo '</div> <!-- .featured-image .news .post -->' . PHP_EOL;
 		}
 		?>
 		<?php the_content(); ?>
