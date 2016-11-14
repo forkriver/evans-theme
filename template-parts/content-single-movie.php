@@ -13,10 +13,10 @@
 
 <?php
 	$hero = 'large';
-	if( class_exists( 'Evans_Movie' ) && Evans_Movie::POST_TYPE === get_post_type() ) {
+	if ( class_exists( 'Evans_Movie' ) && Evans_Movie::POST_TYPE === get_post_type() ) {
 		$hero = Evans_Movie::POST_TYPE . '_hero';
 	}
-	if( has_post_thumbnail() ) {
+	if ( has_post_thumbnail() ) {
 		the_post_thumbnail( $hero );
 	}
 ?>

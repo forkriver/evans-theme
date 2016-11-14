@@ -18,6 +18,15 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
+		<?php
+		$hero = 'large';
+		if ( class_exists( 'Evans_Movie' ) && Evans_Movie::POST_TYPE === get_post_type() ) {
+			$hero = Evans_Movie::POST_TYPE . '_hero';
+		}
+		if ( has_post_thumbnail() ) {
+			the_post_thumbnail( $hero );
+		}
+		?>
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(
