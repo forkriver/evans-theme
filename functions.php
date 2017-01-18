@@ -208,3 +208,19 @@ function evans_2015_replace_background() {
 	}
 }
 //add_action( 'wp_enqueue_scripts', 'evans_2015_replace_background', 20 );
+
+add_action( 'evans_front_page_news', 'evans_get_news_item' );
+function evans_get_news_item() {
+	// Gets the most recent news item in the "Front Page Announcement" category.
+	$args = array(
+		'numberposts' => 1,
+		'category' => get_cat_id( 'Front Page Announcement' ),
+	);
+	$news = get_posts( $args );
+	if ( isset( $news ) && ! empty( $news ) ) {
+		echo '<div class="front-page-news">' . PHP_EOL;
+		echo '<h2><a href="' . get_permalink( $news[0] ) . '">' . $news[0]->post_title . '</a></h2>' . PHP_EOL;
+
+		echo '</div> <!-- .front-page-news -->' . PHP_EOL;
+	}
+}

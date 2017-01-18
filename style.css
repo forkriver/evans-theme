@@ -691,6 +691,19 @@ h1.widget-title {
 h1.movie-title {
   font-style: italic; }
 
+.front-page-news {
+  text-align: center;
+  background: #ffa;
+  width: 100%;
+  margin: 0;
+  padding: 0.5em 0; }
+  .front-page-news h2 {
+    font-size: 125%; }
+    .front-page-news h2 a {
+      text-decoration: none; }
+    .front-page-news h2 a:hover {
+      text-decoration: underline; }
+
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {

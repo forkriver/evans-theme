@@ -9,6 +9,7 @@ get_header( 'front-page' ); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+		<?php do_action( 'evans_front_page_news' ); ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
